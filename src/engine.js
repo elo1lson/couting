@@ -1,9 +1,10 @@
 module.exports = function(message) {
   if (message.author.bot) return
   message.react("🦆")
-  if(message.content != isNaN){
-    console.log("Number")
+  function isNumber(str) {
+    return !isNaN(str)
   }
+  console.log(isNumber(message.content))
   /*
   var channel = db.get(`servers.${message.guild.id}.channel`)
   if (message.attachments.size > 0) return
