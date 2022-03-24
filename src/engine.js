@@ -1,7 +1,7 @@
 //const db = require('quick.db')
 module.exports = function(message) {
   if (message.author.bot) return
-  if(message.attachment.size >0) return
+  if (message.attachments.size > 0) return
   //let channel = await db.get(`guilds.${message.guild.id}.channel`)
 
   function isNumber(str) {
@@ -9,13 +9,13 @@ module.exports = function(message) {
   }
   if (isNumber(message.content)) {
     let msg = Number(message.content)
-    console.log(value)
-    if(message.content)
-    
-    if (!channel) {
-      return message.channel.send({
-        content: 'Parece que você não configurou um canal para contar'
-      })
+    if (msg > 0) {
+    /*  if (!channel) {
+        return message.channel.send({
+          content: 'Parece que você não configurou um canal para contar'
+        })
+      }*/
+      console.log(value)
     }
   }
   /*
