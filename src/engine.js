@@ -1,4 +1,5 @@
 module.exports = function(message) {
+  if(message.author.bot) return
   message.reply({content: 'Okk'})
   /*
   var channel = db.get(`servers.${message.guild.id}.channel`)
