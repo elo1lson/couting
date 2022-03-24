@@ -10,12 +10,12 @@ module.exports = function(message) {
   if (isNumber(message.content)) {
     let msg = Number(message.content)
     if (msg > 0) {
-    /*  if (!channel) {
-        return message.channel.send({
-          content: 'Parece que você não configurou um canal para contar'
-        })
-      }*/
-      console.log(value)
+      /*  if (!channel) {
+          return message.channel.send({
+            content: 'Parece que você não configurou um canal para contar'
+          })
+        }*/
+      console.log(msg)
     }
   }
   /*
