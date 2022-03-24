@@ -7,13 +7,15 @@ module.exports = class extends Event {
     })
   }
   execute = async (message) => {
+    if (message.attachments.size > 0) return
+    if (message.author.bot) return;
+
     engine(message)
- /*   let prefix = process.env.PREFIX
+
+    let prefix = process.env.PREFIX
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase()
-    if (message.author.bot) return;
     if (!message.content.toLowerCase().startsWith(prefix.toLowerCase())) return;
-    if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
     if (cmd.length === 0) return;
     let command = this.client.commands.get(cmd)
@@ -22,6 +24,6 @@ module.exports = class extends Event {
       command.run(this.client, message, args)
     } catch (err) {
       console.error('Erro:' + err);
-    }*/
+    }
   }
 }
