@@ -38,9 +38,8 @@ module.exports = async (message) => {
         }
         if (cont === msg - 1) {
           await db.add(`guilds.${message.guild.id}.number`, 1)
-          var a = await db.set(`guilds.${message.guild.id}.last`, `${message.author.id}`)
+           await db.set(`guilds.${message.guild.id}.last`, `${message.author.id}`)
           await message.react('✅')
-          console.log(a)
         }
         if (cont != msg - 1) {
           await db.set(`guilds.${message.guild.id}.user`, `${message.author}`)
