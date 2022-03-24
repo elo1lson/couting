@@ -1,6 +1,8 @@
 module.exports = function(message) {
-  if(message.author.bot) return
-  message.reply({content: 'Okk'})
+  if (message.author.bot) return
+  message.react("🦆")
+  
+  console.log(isNaN(message))
   /*
   var channel = db.get(`servers.${message.guild.id}.channel`)
   if (message.attachments.size > 0) return
